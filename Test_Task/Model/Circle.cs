@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Test_Task.Abstract;
 
-namespace Test_Task
+namespace Test_Task.Model
 {
-    internal class Circle : Shape
+    public class Circle : IShape
     {
         public double radius { get; set; }
 
@@ -15,7 +16,7 @@ namespace Test_Task
             this.radius = radius;
         }
 
-        public override double CalculateArea()
+        public double CalculateArea()
         {
             double answ = radius * radius * Math.PI;
             return answ;

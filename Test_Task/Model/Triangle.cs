@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Test_Task.Abstract;
 
-namespace Test_Task
+namespace Test_Task.Model
 {
-    internal class Triangle :Shape
+    public class Triangle : IShape
     {
         public double side1 { get; set; }
         public double side2 { get; set; }
@@ -19,7 +20,7 @@ namespace Test_Task
             this.side3 = side3;
         }
 
-        public override double CalculateArea()
+        public double CalculateArea()
         {
             double p = (side1 + side2 + side3) / 2;
             double answ = Math.Sqrt(p * (p - side1) * (p - side2) * (p - side3));

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test_Task
+namespace Test_Task.Abstract
 {
-    internal abstract class Shape
+    public interface IShape
     {
-        public abstract double CalculateArea();
+        public double CalculateArea();
     }
 }
 
