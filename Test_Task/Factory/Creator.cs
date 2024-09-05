@@ -8,7 +8,7 @@ using Test_Task.Model;
 
 namespace Test_Task.Factory
 {
-    public class Creator
+    public class Creator //класс-фабрика, нужен для создания экземпляров фигур, когда заранее не известно какого типа будет фигура
     {
         public static IShape FactoryMethod(string type, params double[] args)
         {
