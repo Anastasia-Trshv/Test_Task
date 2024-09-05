@@ -1,0 +1,9 @@
+Products - таблица с продуктами
+Types- таблица с типами
+ProductsTypes- слабая сущность, устраняющая связь many-to-many
+
+SELECT Products.name,
+	ISNULL(Types.name, "Нет категории")
+FROM ProductsTypes
+	RIGHT JOIN Products ON Products.id = ProductsTypes.product
+	LEFT JOIN Types ON Types.id = ProductsTypes.product.type
